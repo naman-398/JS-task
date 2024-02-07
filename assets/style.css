@@ -1,0 +1,10 @@
+.fs-20px {
+  font-size: 20px;
+}
+.min-vh-100{
+    min-height: 100vh;
+}
+.btnn {
+  border-radius: 20px !important;
+  border: 2px solid black !important;
+}

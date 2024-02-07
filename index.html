@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/styles.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS_TASK</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  </head>
+  <body class=" d-flex gap-5 min-vh-100 align-item-center justify-content-center flex-wrap">
+    <div>
+        <button onclick="table()" class=" p-2 btnn" >Enter a number.</button>
+        <p id="table" class=" fs-20px"></p>
+      </div>
+    <p id="para"></p>
+    <p id="reverse"></p>
+    <p id="para2"></p>
+    <script>
+           // Multiplication table
+      function table() {
+        let number = prompt("Please enter a number");
+        if (isNaN(number)) {
+          document.getElementById("table").innerHTML = "! DON'T USE ALPHABET";
+        } else {
+          let z = "";
+          for (let i = 1; i < 11; i++) {            
+            let y = number + " x " + i + " = " + number * i;
+            z = z + y + "<br>";
+            console.log(z);
+            document.getElementById("table").innerHTML =  z;
+          }
+        }
+      }
+      // sum of numbers
+      let a = 0;
+      for (let b = 1; b < 11; b++) {
+        a = a + b;
+        document.getElementById("para").innerHTML =
+          "Sum of numbers from 1 to 10 : " + a;
+      }
+            // reverse counting
+            let e = "";
+      for (let f = 10; f > 0; f--) {
+        e = e + f + "<br>";
+        document.getElementById("reverse").innerHTML =
+          "Reverse counting : " + "<br>" + e;
+      }
+   
+      // print even numbers
+      let c = "";
+      for (let d = 1; d < 21; d++) {
+        if (d % 2 == 0) {
+          c = c + d + "<br>";
+          document.getElementById("para2").innerHTML =
+            "Even numbers from 1 to 20" + "<br>" + c;
+        }
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
